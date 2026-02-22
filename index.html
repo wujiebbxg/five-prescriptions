@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胡大一五大处方</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Noto Sans SC', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        
+        .title-gradient {
+            background: linear-gradient(135deg, #fff 0%, #e2e8f0 50%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .title-gradient-dark {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px) scale(1.01);
+        }
+        
+        .icon-glow {
+            filter: drop-shadow(0 0 10px currentColor);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .subsection {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-top: 0.75rem;
+        }
+        .subsection-light {
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 min-h-screen relative overflow-x-hidden">
+    
+    <!-- 背景装饰 - 60% 区域 -->
+    <div class="fixed inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
+    
+    <!-- 光晕装饰 - 增加层次感 -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-br from-purple-500/20 rounded-full blur-3xl opacity-60"></div>
+        <div class="absolute top-1/3 -right-20 w-80 h-80 bg-gradient-to-br from-pink-500/20 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute -bottom-20 left-1/3 w-96 h-96 bg-gradient-to-br from-blue-500/20 rounded-full blur-3xl opacity-60"></div>
+    </div>
+    
+    <!-- 主内容 -->
+    <div class="relative z-10 container mx-auto px-4 py-16 max-w-6xl">
+        
+        <!-- 标题区 - 10% 强调色 -->
+        <header class="text-center mb-16">
+            <div class="inline-block mb-8 animate-float">
+                <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-utensils text-3xl text-white icon-glow"></i>
+                </div>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-black mb-4 title-gradient leading-tight">
+                胡大一五大处方
+            </h1>
+            
+            <div class="w-32 h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent mx-auto rounded-full"></div>
+        </header>
+        
+        <!-- 内容卡片网格 - 30% 主色调 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <div class="bg-gradient-to-br from-rose-500/20 to-rose-500/10 rounded-2xl p-6 border-rose-500/30 border card-hover backdrop-blur-sm">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-rose-400 flex items-center justify-center shadow-md">
+                        <i class="fas fa-circle text-sm text-white"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-white">心脏康复的核心策略</h2>
+                </div>
+                
+                
+                
+                
+                
+                
+            <div class="subsection">
+                <h3 class="text-lg font-semibold mb-2 text-white">药物处方</h3>
+                <ul class="space-y-1.5">
+                <li class="flex items-start gap-2 text-sm"><span class="text-rose-300 mt-0.5">•</span><span class="text-white"><span class="font-medium">他汀</span><span class="opacity-60"> — LDL-C < 1.8mmol/L</span></span></li>
+                <li class="flex items-start gap-2 text-sm"><span class="text-rose-300 mt-0.5">•</span><span class="text-white"><span class="font-medium">双抗</span><span class="opacity-60"> — 阿司匹林+氯吡格雷1年</span></span></li>
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">控制血压、血糖</span></li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="text-lg font-semibold mb-2 text-white">运动处方</h3>
+                <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">日行万步路</span></li>
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">循序渐进</span></li>
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">避免剧烈运动</span></li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="text-lg font-semibold mb-2 text-white">营养处方</h3>
+                <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">饭吃八分饱</span></li>
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">低盐低脂</span></li>
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">控制总热量</span></li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="text-lg font-semibold mb-2 text-white">心理睡眠处方</h3>
+                <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">好心态</span></li>
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">充足睡眠</span></li>
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">避免过劳</span></li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="text-lg font-semibold mb-2 text-white">戒烟限酒处方</h3>
+                <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">必须戒烟</span></li>
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">零吸烟</span></li>
+                <li class="flex items-center gap-2 text-sm"><span class="text-rose-300">•</span><span class="text-white">限制饮酒</span></li>
+                </ul>
+            </div>
+
+            </div>
+
+        </div>
+        
+        <footer class="mt-16 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm rounded-full px-5 py-2.5 border-white/10 border">
+                <i class="fas fa-palette text-yellow-400"></i>
+                <span class="text-white/60 text-sm font-medium">60-30-10 配色系统</span>
+            </div>
+        </footer>
+        
+    </div>
+    
+</body>
+</html>

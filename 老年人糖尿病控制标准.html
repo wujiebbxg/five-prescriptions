@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老年人糖尿病控制标准（个体化）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+        }
+        .medical-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .card-header {
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            background: #fafbfc;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .highlight-box {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .warning-box {
+            background: #fff0f0;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .success-box {
+            background: #f0fff4;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th {
+            background: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 500;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        tr:hover {
+            background: #f8f9fa;
+        }
+        .metric-value {
+            color: #e74c3c;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .icon-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .icon-title i {
+            color: #3498db;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .badge-success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .badge-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .badge-info {
+            background: #cce5ff;
+            color: #004085;
+        }
+        .footer-note {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            padding: 20px;
+            border-top: 1px solid #e8e8e8;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <!-- 标题 -->
+        <div class="medical-card">
+            <div class="card-header text-center" style="border-left: none; border-bottom: 3px solid #3498db;">
+                <h1 class="text-2xl font-bold text-gray-800">
+                    <i class="fas fa-notes-medical text-blue-500 mr-2"></i>
+                    老年人糖尿病控制标准
+                </h1>
+                <p class="text-gray-500 mt-2">个体化管理指南</p>
+            </div>
+        </div>
+
+        <!-- 核心提示 -->
+        <div class="warning-box">
+            <div class="icon-title mb-2">
+                <i class="fas fa-exclamation-triangle text-red-500"></i>
+                <strong>重要提示</strong>
+            </div>
+            <p>没有单一固定标准，需根据<strong>年龄、健康状况、并发症、低血糖风险</strong>等综合制定个体化方案。</p>
+        </div>
+
+        <!-- 控制目标表格 -->
+        <div class="medical-card">
+            <div class="card-header">
+                <div class="icon-title">
+                    <i class="fas fa-bullseye"></i>
+                    核心控制指标
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>指标</th>
+                                <th>健康老年人</th>
+                                <th>有并发症/高风险老年人</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>糖化血红蛋白 (HbA1c)</strong></td>
+                                <td><span class="metric-value">&lt; 7%</span></td>
+                                <td><span class="metric-value">&lt; 7.5-8%</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>空腹血糖</strong></td>
+                                <td>4.4 - 7.2 mmol/L</td>
+                                <td>可适当放宽</td>
+                            </tr>
+                            <tr>
+                                <td><strong>餐后2小时血糖</strong></td>
+                                <td>&lt; 10.0 mmol/L</td>
+                                <td>可适当放宽</td>
+                            </tr>
+                            <tr>
+                                <td><strong>血压</strong></td>
+                                <td>&lt; 140/90 mmHg</td>
+                                <td>个体化调整</td>
+                            </tr>
+                            <tr>
+                                <td><strong>低密度脂蛋白 (LDL-C)</strong></td>
+                                <td>根据心血管风险评估</td>
+                                <td>个体化调整</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分层管理 -->
+        <div class="medical-card">
+            <div class="card-header">
+                <div class="icon-title">
+                    <i class="fas fa-layer-group"></i>
+                    分层管理原则
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="success-box">
+                        <div class="icon-title mb-2">
+                            <i class="fas fa-check-circle text-green-600"></i>
+                            <strong>严格控糖 (&lt; 7%)</strong>
+                        </div>
+                        <ul class="text-sm space-y-1">
+                            <li>• 一般健康状况良好</li>
+                            <li>• 无严重并发症</li>
+                            <li>• 预期寿命较长</li>
+                            <li>• 低血糖风险低</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-box">
+                        <div class="icon-title mb-2">
+                            <i class="fas fa-hand-holding-heart text-yellow-600"></i>
+                            <strong>放宽目标 (7.5% - 8%)</strong>
+                        </div>
+                        <ul class="text-sm space-y-1">
+                            <li>• 有中重度并发症（心梗、脑梗、肾病）</li>
+                            <li>• 有低血糖史</li>
+                            <li>• 肝肾功能不全</li>
+                            <li>• 独居或认知功能下降</li>
+                            <li>• 年龄 &gt; 80岁</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 低血糖警示 -->
+        <div class="medical-card">
+            <div class="card-header" style="border-left-color: #e74c3c;">
+                <div class="icon-title">
+                    <i class="fas fa-heart-pulse" style="color: #e74c3c;"></i>
+                    低血糖识别与处理
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="warning-box">
+                    <strong>⚠️ 特别提醒：不要追求过低血糖</strong>
+                    <p class="mt-2">严格控糖可能增加低血糖风险，对老年人可导致<strong>昏迷、跌倒、心梗</strong>等严重后果。</p>
+                </div>
+                
+                <h3 class="font-semibold mb-3 mt-4"><i class="fas fa-triangle-exclamation text-yellow-500 mr-2"></i>低血糖症状</h3>
+                <div class="grid md:grid-cols-2 gap-3 mb-4">
+                    <div class="bg-gray-50 p-3 rounded">
+                        <span class="badge badge-warning">常见症状</span>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• 心慌、手抖、出大汗</li>
+                            <li>• 饥饿、乏力、头晕</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50 p-3 rounded">
+                        <span class="badge badge-success">严重症状</span>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• 意识模糊、昏迷</li>
+                            <li>• 抽搐、跌倒</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="success-box">
+                    <strong><i class="fas fa-first-aid text-green-600 mr-2"></i>紧急处理</strong>
+                    <p class="mt-2">立即补充 <span class="metric-value">15克糖</span>（方糖、含糖饮料），15分钟后复测血糖。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 定期筛查 -->
+        <div class="medical-card">
+            <div class="card-header">
+                <div class="icon-title">
+                    <i class="fas fa-stethoscope"></i>
+                    定期筛查（每年）
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="grid md:grid-cols-3 gap-3">
+                    <div class="text-center p-3 bg-blue-50 rounded">
+                        <i class="fas fa-kidney text-blue-500 text-2xl mb-2"></i>
+                        <p class="font-medium">肾功能</p>
+                        <p class="text-xs text-gray-600">尿常规</p>
+                    </div>
+                    <div class="text-center p-3 bg-blue-50 rounded">
+                        <i class="fas fa-eye text-blue-500 text-2xl mb-2"></i>
+                        <p class="font-medium">眼底检查</p>
+                        <p class="text-xs text-gray-600">糖尿病视网膜病变</p>
+                    </div>
+                    <div class="text-center p-3 bg-blue-50 rounded">
+                        <i class="fas fa-heart-pulse text-blue-500 text-2xl mb-2"></i>
+                        <p class="font-medium">心电图</p>
+                        <p class="text-xs text-gray-600">心血管评估</p>
+                    </div>
+                    <div class="text-center p-3 bg-blue-50 rounded">
+                        <i class="fas fa-shoe-prints text-blue-500 text-2xl mb-2"></i>
+                        <p class="font-medium">足部检查</p>
+                        <p class="text-xs text-gray-600">糖尿病足筛查</p>
+                    </div>
+                    <div class="text-center p-3 bg-blue-50 rounded">
+                        <i class="fas fa-brain text-blue-500 text-2xl mb-2"></i>
+                        <p class="font-medium">神经感觉</p>
+                        <p class="text-xs text-gray-600">周围神经病变</p>
+                    </div>
+                    <div class="text-center p-3 bg-blue-50 rounded">
+                        <i class="fas fa-tooth text-blue-500 text-2xl mb-2"></i>
+                        <p class="font-medium">口腔检查</p>
+                        <p class="text-xs text-gray-600">牙周健康</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 生活方式 -->
+        <div class="medical-card">
+            <div class="card-header">
+                <div class="icon-title">
+                    <i class="fas fa-person-walking"></i>
+                    生活方式干预
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="border p-4 rounded">
+                        <h4 class="font-semibold mb-2"><i class="fas fa-utensils text-green-500 mr-2"></i>饮食</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• 均衡饮食，控制精制糖</li>
+                            <li>• 保证优质蛋白和膳食纤维</li>
+                            <li>• 规律进餐，避免暴饮暴食</li>
+                            <li>• 不要过度节食</li>
+                        </ul>
+                    </div>
+                    <div class="border p-4 rounded">
+                        <h4 class="font-semibold mb-2"><i class="fas fa-dumbbell text-blue-500 mr-2"></i>运动</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• 每周150分钟中等强度有氧运动</li>
+                            <li>• 快走、太极、游泳等</li>
+                            <li>• 运动前后监测血糖</li>
+                            <li>• 随身携带糖块</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 医生建议 -->
+        <div class="medical-card">
+            <div class="card-header" style="border-left-color: #28a745;">
+                <div class="icon-title">
+                    <i class="fas fa-user-doctor" style="color: #28a745;"></i>
+                    建议
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="bg-green-50 p-4 rounded">
+                    <p><strong>具体目标需与主治医生讨论制定</strong>，根据您的：</p>
+                    <ul class="mt-2 space-y-1">
+                        <li>✓ 确切年龄</li>
+                        <li>✓ 并发症情况</li>
+                        <li>✓ 目前用药</li>
+                        <li>✓ 肝肾功能</li>
+                        <li>✓ 认知状态</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer-note">
+            <p><i class="fas fa-info-circle mr-1"></i>本资料仅供参考，具体治疗方案请遵医嘱</p>
+            <p class="mt-1 text-xs">数据来源：中国2型糖尿病防治指南、基层糖尿病管理指南</p>
+        </div>
+    </div>
+</body>
+</html>
